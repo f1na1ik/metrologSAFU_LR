@@ -14,8 +14,6 @@ body {
     background: linear-gradient(18deg, rgba(103,13,16,0.8750875350140056) 20%, rgba(9,39,86,0.9330707282913166) 73%);
 }
 
-
-
 .form-auth {
     max-width: 360px;
     width: 100%;
@@ -23,8 +21,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
 
+}
 
 .form-auth__h3 {
     text-align: center;
@@ -62,8 +60,13 @@ body {
     color: white;
     border: 1px solid #464dcd;
     border-radius: 4px;
+    transition: .3s;
+}
+.form-auth__button:hover {
+    box-shadow: 1px 2px 20px #2b1c1c;
 }
 
 .form-auth__button:hover {
     cursor: pointer;
 }
+
