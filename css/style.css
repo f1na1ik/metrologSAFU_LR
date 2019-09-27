@@ -72,3 +72,19 @@ body {
     cursor: pointer;
 }
 
+/*-----------------Ввод коэффициентов-------------------------*/
+.form-math {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /*display: none;*/
+}
+
+.form-math__h3 {
+    color: #e5e5e5;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
