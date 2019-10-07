@@ -79,6 +79,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    /*---------------------------------*/
     /*display: none;*/
 }
 
@@ -88,3 +89,14 @@ body {
     margin-bottom: 15px;
 }
 
+.form-math__input-h3 {
+    color: #e5e5e5;
+}
+
+.form-math_button {
+    display: block;
+    max-width: 173px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 4px 0;
+}
