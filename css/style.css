@@ -93,10 +93,20 @@ body {
     color: #e5e5e5;
 }
 
-.form-math_button {
+.form-math__input-h3_result {
+    text-align: left;
+}
+
+.form-math__button {
     display: block;
     max-width: 173px;
     width: 100%;
     margin: 20px auto;
     padding: 4px 0;
+}
+
+.form-math__result-block {
+    max-width: 173px;
+    width: 100%;
+    margin: 0 auto;
 }

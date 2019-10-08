@@ -17,32 +17,38 @@ authButton.addEventListener('click', (event) => {
 });
 //---------------------------------------math-form------------------------------
 
-let coeffA = document.querySelector('.form-math__coeff-A').value;
-let coeffB = document.querySelector('.form-math__coeff-B').value;
-let coeffC = document.querySelector('.form-math__coeff-C').value;
+let buttonResult = document.querySelector('.form-math__button');
 
-let buttonResult = document.querySelector('.form-math_button');
+buttonResult.addEventListener('click', function (event) {
 
-buttonResult.addEventListener('click', function () {
-    let quadraticEquation = (a, b, c) => {
-        if (a == 0) {
+    event.preventDefault();
+
+    let coeffA = document.querySelector('.form-math__coeff-A').value;
+    let coeffB = document.querySelector('.form-math__coeff-B').value;
+    let coeffC = document.querySelector('.form-math__coeff-C').value;
+
+        if (coeffA == 0) {
             return false
         }
         let res = {};
-        let D = b * b - 4 * a * c;
+        let D = coeffB * coeffB - 4 * coeffA * coeffC;
         console.log('D = ' + D);
         if (D < 0) {
             return false
         }
         res['discriminant'] = D;
         if (D == 0) {
-            res['quadratic roots'] = (-b + Math.sqrt(D)) / (2 * a);
+            res['quadratic roots'] = (-coeffB + Math.sqrt(D)) / (2 * coeffA);
         } else if (D > 0) {
             let tmp = [];
-            tmp.push((-b + Math.sqrt(D)) / (2 * a));
-            tmp.push((-b - Math.sqrt(D)) / (2 * a));
+            tmp.push((-coeffB + Math.sqrt(D)) / (2 * coeffA));
+            tmp.push((-coeffB - Math.sqrt(D)) / (2 * coeffA));
             res['quadratic roots'] = tmp;
         }
+        console.table(res);
         return res;
-    }
+
+//      -------------Заполнение данных в теги---------------
+
 });
+
