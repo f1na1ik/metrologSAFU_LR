@@ -27,14 +27,21 @@ buttonResult.addEventListener('click', function (event) {
     let coeffB = document.querySelector('.form-math__coeff-B').value;
     let coeffC = document.querySelector('.form-math__coeff-C').value;
 
+    let resD = document.querySelector('.form-math__input-h3_resD');
+    let resX1 = document.querySelector('.form-math__input-h3_resX1');
+    let resX2 = document.querySelector('.form-math__input-h3_resX2')
+
         if (coeffA == 0) {
             return false
         }
         let res = {};
-        let D = coeffB * coeffB - 4 * coeffA * coeffC;
+        let D = 0;
+        D = coeffB * coeffB - 4 * coeffA * coeffC;
         console.log('D = ' + D);
         if (D < 0) {
-            return false
+            resD.innerHTML = `D = ${D}`;
+
+            return false;
         }
         res['discriminant'] = D;
         if (D == 0) {
@@ -45,7 +52,12 @@ buttonResult.addEventListener('click', function (event) {
             tmp.push((-coeffB - Math.sqrt(D)) / (2 * coeffA));
             res['quadratic roots'] = tmp;
         }
-        console.table(res);
+        console.log(res);
+
+        resD.innerHTML = `D = ${res['discriminant']}`;
+        resX1.innerHTML = `X1 = ${res['quadratic roots'][0].toFixed(3)}`;
+        resX2.innerHTML = `X2 = ${res['quadratic roots'][1].toFixed(3)}`;
+
         return res;
 
 //      -------------Заполнение данных в теги---------------
