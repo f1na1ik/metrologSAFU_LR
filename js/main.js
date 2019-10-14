@@ -27,13 +27,16 @@ buttonResult.addEventListener('click', function (event) {
 
     event.preventDefault();
 
+    let timer = performance.now();
+
     let coeffA = document.querySelector('.form-math__coeff-A').value;
     let coeffB = document.querySelector('.form-math__coeff-B').value;
     let coeffC = document.querySelector('.form-math__coeff-C').value;
 
     let resD = document.querySelector('.form-math__input-h3_resD');
     let resX1 = document.querySelector('.form-math__input-h3_resX1');
-    let resX2 = document.querySelector('.form-math__input-h3_resX2')
+    let resX2 = document.querySelector('.form-math__input-h3_resX2');
+    let timerForm = document.querySelector('.form-math__input-h3_timeResult');
 
     if (coeffA == 0) {
         return false
@@ -61,7 +64,10 @@ buttonResult.addEventListener('click', function (event) {
     resD.innerHTML = `D = ${res['discriminant']}`;
     resX1.innerHTML = `X1 = ${res['quadratic roots'][0].toFixed(3)}`;
     resX2.innerHTML = `X2 = ${res['quadratic roots'][1].toFixed(3)}`;
+    timer = performance.now() - timer;
+    timerForm.innerHTML = `Время вып. = ${timer.toFixed(3)}`;
 
+    // console.log(timer);
     return res;
 
 });
