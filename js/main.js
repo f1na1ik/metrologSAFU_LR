@@ -76,6 +76,6 @@ buttonResult.addEventListener('click', function (event) {
 
 });
 
-//----------------появление, скрытие форм------------------
+//----------------model shuman------------------
 
 
