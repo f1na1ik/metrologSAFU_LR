@@ -47,6 +47,10 @@ buttonResult.addEventListener('click', function (event) {
     console.log('D = ' + D);
     if (D < 0) {
         resD.innerHTML = `D = ${D}`;
+        resX1.innerHTML = 'корней нет';
+        resX2.innerHTML = '';
+        timer = performance.now() - timer;
+        timerForm.innerHTML = `Время вып. = ${timer.toFixed(3)}`;
 
         return false;
     }
