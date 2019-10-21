@@ -105,6 +105,12 @@ body {
     margin: 20px auto;
     padding: 4px 0;
 }
+.form-math__button a{
+    text-decoration: none;
+    color: black;
+    cursor: default;
+    width: 100%;
+}
 
 .form-math__result-block {
     max-width: 173px;
@@ -118,6 +124,30 @@ body {
 }
 .model-shuman__column {
     color: white;
-    padding: 10px 30px;
+    /*padding: 10px 30px;*/
     border: 1px solid black;
+}
+
+.model-shuman__column input {
+    max-width: 35px;
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.model-shuman__title {
+    color: white;
+}
+
+.model-shuman__label {
+    color: #fff;
+}
+.model-shuman__label + input {
+    width: 30px;
 }
