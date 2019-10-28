@@ -10,6 +10,10 @@ html {
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     background: rgb(103,13,16);
     background: linear-gradient(18deg, rgba(103,13,16,0.8750875350140056) 20%, rgba(9,39,86,0.9330707282913166) 73%);
 }
@@ -105,6 +109,7 @@ body {
     margin: 20px auto;
     padding: 4px 0;
 }
+
 .form-math__button a{
     text-decoration: none;
     color: black;
@@ -118,9 +123,15 @@ body {
     margin: 0 auto;
 }
 /*---------------MODEL SHUMAN -------------------*/
+
+.model-shuman {
+
+}
+
 .model-shuman__table {
     border-collapse: collapse;
     border: 1px solid grey;
+    margin-bottom: 10px;
 }
 .model-shuman__column {
     color: white;
@@ -150,4 +161,9 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .model-shuman__label + input {
     width: 30px;
+}
+
+.model-shuman__button {
+    font-size: 15px;
+    cursor: pointer;
 }
