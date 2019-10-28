@@ -124,15 +124,17 @@ body {
 }
 /*---------------MODEL SHUMAN -------------------*/
 
-.model-shuman {
-
+.model-shuman__title {
+    margin-bottom: 10px;
 }
 
 .model-shuman__table {
     border-collapse: collapse;
     border: 1px solid grey;
+    margin-top: 10px;
     margin-bottom: 10px;
 }
+
 .model-shuman__column {
     color: white;
     /*padding: 10px 30px;*/

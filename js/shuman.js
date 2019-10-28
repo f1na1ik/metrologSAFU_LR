@@ -4,30 +4,37 @@ let bodyTable = table.querySelector('tbody');
 
 testAmount.addEventListener('input', () => {
 
-    let tableChildren = Object.values(bodyTable.children);
+	if (testAmount.value <= 20 && testAmount.value >= 0) {
 
-    console.log(tableChildren);
+        testAmount.style.color = '';
 
-    tableChildren[0].innerHTML = '<td class="model-shuman__column"></td>';
-    tableChildren[1].innerHTML = '<td class="model-shuman__column">Кол-во ошибок</td>';
-    tableChildren[2].innerHTML = '<td class="model-shuman__column">Время тестирования</td>';
+        let tableChildren = Object.values(bodyTable.children);
 
-    tableChildren.forEach((row) => {
+		console.log(tableChildren);
 
-        console.log(row);
+		tableChildren[0].innerHTML = '<td class="model-shuman__column"></td>';
+		tableChildren[1].innerHTML = '<td class="model-shuman__column">Кол-во ошибок</td>';
+		tableChildren[2].innerHTML = '<td class="model-shuman__column">Время тестирования</td>';
 
-        for(let i = 0; i< testAmount.value; i++) {
+		tableChildren.forEach((row) => {
 
-            if (row.className === 'model-shuman__row model-shuman__test-number') {
+			console.log(row);
 
-                row.innerHTML +=`<td class="model-shuman__column"> ${i+1} </td>`;
+			for (let i = 0; i < testAmount.value; i++) {
 
-            } else {
+				if (row.className === 'model-shuman__row model-shuman__test-number') {
 
-                row.innerHTML += `<td class="model-shuman__column"><input type="number"></td>`
-            }
-        }
-    })
+					row.innerHTML += `<td class="model-shuman__column"> ${i + 1} </td>`;
 
+				} else {
 
+					row.innerHTML += `<td class="model-shuman__column"><input type="number"></td>`
+				}
+			}
+		})
+
+	} else {
+
+	    testAmount.style.color = 'red';
+    }
 });
