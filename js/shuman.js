@@ -2,7 +2,7 @@ let testAmount = document.querySelector('#tests-amount');
 let table = document.querySelector('.model-shuman__table');
 let bodyTable = table.querySelector('tbody');
 
-testAmount.addEventListener('input', () => {
+testAmount.addEventListener('change', () => {
 
 	if (testAmount.value <= 20 && testAmount.value >= 0) {
 
@@ -38,3 +38,9 @@ testAmount.addEventListener('input', () => {
 	    testAmount.style.color = 'red';
     }
 });
+
+let countButton = document.querySelector('.model-shuman__button');
+
+countButton.addEventListener('click', (e) => {
+	e.preventDefault();
+})

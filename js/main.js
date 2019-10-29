@@ -10,7 +10,7 @@ let formMath = document.querySelector('.form-math');
 let authForm = document.querySelector('.form-auth');
 
 authButton.addEventListener('click', (event) => {
-    this.event.preventDefault();
+    event.preventDefault();
     if (inputLogin.value == correctLogin && inputPassword.value == correctPassword) {
         authForm.style.display = 'none';
         alert('Вы вошли в систему.');
