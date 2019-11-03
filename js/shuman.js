@@ -173,7 +173,7 @@ countButton.addEventListener('click', (e) => {
 			let C = ia / (Et/kol - ea);
 			let R = (Math.exp(C * ((Et/kol) - (qk/kol)) * t) * 100).toFixed(3);
 
-			alert(R);
+			alert("Надежность системы равна " +R +"%");
 
 			console.log(qk);
 			console.log(kol);
